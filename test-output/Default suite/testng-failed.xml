@@ -3,19 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.healthcare.Medicave.DoctorModule.UpdatePatientDetailsTest">
+      <class name="com.healthcare.Medicave.AdminModule.AddDoctorTest">
         <methods>
-          <include name="createPatientMedicalReport"/>
-          <include name="logoutApllication"/>
           <include name="browserClose"/>
-          <include name="updatePatientTest"/>
-          <include name="addPatientTest"/>
+          <include name="addDoctorTest"/>
           <include name="loginApplication"/>
+          <include name="logoutApllication"/>
           <include name="config_AS"/>
           <include name="config_BS"/>
           <include name="config_BC"/>
         </methods>
-      </class> <!-- com.healthcare.Medicave.DoctorModule.UpdatePatientDetailsTest -->
+      </class> <!-- com.healthcare.Medicave.AdminModule.AddDoctorTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

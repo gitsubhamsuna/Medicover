@@ -13,7 +13,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-public class CustomListeners extends BaseClass implements ITestListener{
+public class CustomListeners implements ITestListener{
 	ExtentReports report;
 	ExtentTest test;
 	@Override
@@ -33,10 +33,11 @@ public class CustomListeners extends BaseClass implements ITestListener{
 	@Override
 	public void onTestFailure(ITestResult result) {
 		JavaUtilities ju=new JavaUtilities();
+		
 		String path=null;
 		String methodName=result.getMethod().getMethodName();
 		try {
-		 path=driverUtility.screenshotWebpage(sdriver,methodName+ ju.getSystemDateinFormat());
+		 path=WebDriverCommonUtility.screenshotWebpage(BaseClass.sdriver,methodName+ ju.getSystemDateinFormat());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
